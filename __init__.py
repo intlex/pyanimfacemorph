@@ -14,7 +14,7 @@ fa = face_alignment.FaceAlignment(
     flip_input=False
 )
 
-def get_landmarks_face(image):
+def get_face_landmarks(image):
     preds = fa.get_landmarks(image)
     if preds is None:
         raise Exception("No face found!")
@@ -132,8 +132,8 @@ def gradio_morph_animation(face1_img, face2_img):
     h, w = face1_img_bgr.shape[:2]
     face2_img_bgr = cv2.resize(face2_img_bgr, (w, h))
     
-    landmarks1 = get_landmarks_face(face1_img_bgr)
-    landmarks2 = get_landmarks_face(face2_img_bgr)
+    landmarks1 = get_face_landmarks(face1_img_bgr)
+    landmarks2 = get_face_landmarks(face2_img_bgr)
     
     boundary_pts = [(0, 0), (w//2, 0), (w-1, 0), (w-1, h//2),
                     (w-1, h-1), (w//2, h-1), (0, h-1), (0, h//2)]
