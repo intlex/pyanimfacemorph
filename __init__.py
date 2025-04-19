@@ -165,15 +165,15 @@ def gradio_morph_animation(face1_img, face2_img):
 demo = gr.Interface(
     fn=gradio_morph_animation,
     inputs=[
-        gr.Image(label="First face", type="numpy"),
-        gr.Image(label="Last face", type="numpy")
+        gr.Image(label="First image", type="numpy"),
+        gr.Image(label="Last image", type="numpy")
     ],
     outputs=[
         gr.Image(label="Animation (GIF)"),
         gr.Image(label="Checkpoints (α=0.5)"),
         gr.Textbox(label="Message", lines=2)
     ],
-    title="Animated facial morphing",
+    title="Make morphing animation",
     description="Upload images – animation is created by changing α from 0 to 1, and checkpoints are shown for a frame with α=0.5."
 )
 
