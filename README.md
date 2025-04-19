@@ -5,4 +5,6 @@ It uses the face_alignment library for facial recognition and the gradio for the
 
 Examples
 -------------
-![](images/white-cat-1.png) | ![](images/white-cat-2.png) | ![](images/tmp9w8ve9ys.gif)
+![](images/tmp2oly59j6.gif)
+
+![](images/tmp9w8ve9ys.gif)
